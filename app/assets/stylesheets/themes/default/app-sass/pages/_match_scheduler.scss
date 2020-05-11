@@ -1,0 +1,13 @@
+.set-card {
+  margin-bottom: $margin-sm;
+  .set-header {
+    background-color: $brand-primary;
+    color: $white;
+  }
+  .set-body {
+    background-color: $gray-lighter;
+    .unscheduled {
+      color: $danger;
+    }
+  }
+}

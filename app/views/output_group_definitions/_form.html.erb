@@ -1,0 +1,37 @@
+<%= form_with(model: output_group_definition, local: true) do |form| %>
+  <% if output_group_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(output_group_definition.errors.count, "error") %> prohibited this output_group_definition from being saved:</h2>
+
+      <ul>
+        <% output_group_definition.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :draw_definition_id %>
+    <%= form.text_field :draw_definition_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.number_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sequence %>
+    <%= form.number_field :sequence %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

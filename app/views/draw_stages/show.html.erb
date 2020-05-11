@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draw stage definition:</strong>
+  <%= @draw_stage.draw_stage_definition_id %>
+</p>
+
+<p>
+  <strong>Draw step:</strong>
+  <%= @draw_stage.draw_step_id %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @draw_stage.group_id %>
+</p>
+
+<%= link_to 'Edit', edit_draw_stage_path(@draw_stage) %> |
+<%= link_to 'All', draw_stages_path %>

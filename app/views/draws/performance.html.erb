@@ -1,0 +1,108 @@
+<script>
+$(function() {
+  $("#explanation-modal").on('show.bs.modal', on_modal_open);
+  $(window).on('load', show_unavailable_choices);
+}); 
+</script>
+
+<div class="row">
+  <%= content_for :page_title, @draw.draw_definition.name+"- Draw Definition" %>
+  
+  <div class="col-md-4">
+    
+    <div class="row">
+      <div class="widget wide">
+        <div class="widget-header">
+          <h4 class="widget-title"><span>Draw Stage and Step</span></h4>
+        </div>
+        <div class="widget-body">
+          <div><h5><%= @draw.draw_stage.draw_stage_definition.name%></h5></div>
+          <div><h5><%= @draw.draw_stage.draw_step.draw_step_variety.description%></h5></div>
+          <div class="execute-undo">
+            <span class="inline-span">
+              <%= button_to "Execute Step", next_step_draw_path, :method => "post", :class => "btn btn-secondary btn-sm"%>
+              <%= button_to "Undo", undo_step_draw_path, :method => "post", :class => "btn btn-secondary btn-sm"%>
+            </span>
+            <p id="notice"><%= notice %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%if @draw.draw_stage.input_teams.length > 0%>
+      <div class="row">
+        <%= render partial: 'draws/element_container', locals:{ title:"Stage Input Teams", elements:@draw.draw_stage.input_teams} %>
+      </div>  
+    <%end%>
+    
+    <%if @draw_step_groups.length > 0 %>
+      <div class="row">
+        <%= render partial: 'draws/element_container', locals:{ title: @draw.draw_definition.output_group_name.pluralize+" Available for Step", elements:@draw_step_groups} %>
+      </div>
+    <%end%>
+    
+    <%if @available_drum_teams.length+@available_drum_groups.length > 0 %>
+      <div class="row">
+        <%variety = @draw.current_stage.current_step.draw_step_variety%>
+        <div class="col-md-8 team-drum">
+          <%= render partial: 'draws/team_drum', locals:{ available: @available_drum_teams, 
+                                                          selected_id: @draw.selected_team_id, 
+                                                          selection_control: variety } %>
+        </div>
+
+        <div class="col-md-4 group-drum"> 
+          <%= render partial: 'draws/group_drum', locals:{ available: @available_drum_groups,
+                                                           group_type_name: @draw.draw_definition.output_group_name,   
+                                                           selection_control: variety} %>
+        </div>
+      </div>
+    <%end%>
+
+    <%if @unavailable_drum_teams.length+@unavailable_drum_groups.length > 0 %>
+      <div class="row">
+        <%= render partial: 'draws/unavailable', locals:{ unavailable: @unavailable_drum_teams + @unavailable_drum_groups} %>
+      </div>
+    <%end%>
+
+  </div>
+
+  <div class="col-md-8">
+    <%= render partial: 'draws/draw_board', locals:{ draw: @draw, assigned_teams: @assigned_teams, max_rows: @max_output_group_size } %>
+  </div>
+  
+</div>
+
+<div class="modal fade" id="explanation-modal" tabindex="-1" role="dialog" aria-labelledby="explanation-modal-label" aria-hidden="true">
+  <div class="modal-dialog themed" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="explanation-modal-label">Unavailable Choices</h4>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <%for e in @unavailable_drum_teams + @unavailable_drum_groups do%>
+            <li class="unavailable-choice" id="choice-<%=e.first.class.name+e.first.id.to_s%>"><%=e.second.long_description%></li>
+          <%end%>
+        </ul> 
+      </div>
+      <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function show_unavailable_choices() {
+  if($(".unavailable").length) $("#explanation-modal").modal("show");
+};
+
+function on_modal_open(event) {
+  var button = $(event.relatedTarget) 
+  var choiceId = button.data('choice')
+  $(".unavailable-choice").removeClass("highlight-choice").removeClass("other-choice")
+  if(choiceId) {
+    $(".unavailable-choice").addClass("other-choice")
+    $("#choice-"+choiceId).addClass("highlight-choice")
+  }
+};
+</script>

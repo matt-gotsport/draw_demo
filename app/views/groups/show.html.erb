@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draw definition:</strong>
+  <%= @group.draw_definition.nil? ? "Not Associated" : @group.draw_definition.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Image file:</strong>
+  <%= @group.image_file %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'All', groups_path %>

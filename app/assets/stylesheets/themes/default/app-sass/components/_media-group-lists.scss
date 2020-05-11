@@ -1,0 +1,45 @@
+.user-card.media-group-user-item {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  position: relative;
+  .media-right {
+    z-index: 1000;
+    min-width: 80px;
+    display: block;
+    left: 35px;
+    @media (min-width: $screen-md-min) {
+      display: table-cell;
+      left: 0px;
+    }
+    &.media-right-sm {
+      min-width: 85px;
+      left: 46px;
+      @media (min-width: $screen-md-min) {
+        left: 0px;
+      }
+    }
+  }
+}
+
+.new-user-card.media-group-user-item {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  position: relative;
+  .media-right {
+    z-index: 1000;
+    min-width: 80px;
+    display: block;
+    left: 35px;
+    @media (min-width: $screen-md-min) {
+      display: table-cell;
+      left: 0px;
+    }
+    &.media-right-sm {
+      min-width: 85px;
+      left: 46px;
+      @media (min-width: $screen-md-min) {
+        left: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// Place all the styles related to the org/venues controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nested-fields {
+  div:last-of-type {
+    hr {
+      display: none;
+    }
+  }
+}
+
+.row-margin-top{
+  margin-top: 40px;
+}

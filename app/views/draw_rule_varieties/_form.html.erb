@@ -1,0 +1,27 @@
+<%= form_with(model: draw_rule_variety, local: true) do |form| %>
+  <% if draw_rule_variety.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw_rule_variety.errors.count, "error") %> prohibited this draw_rule_variety from being saved:</h2>
+
+      <ul>
+        <% draw_rule_variety.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variety %>
+    <%= form.text_field :variety %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

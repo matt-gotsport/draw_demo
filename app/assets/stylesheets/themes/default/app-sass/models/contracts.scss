@@ -1,0 +1,40 @@
+.receiving-org-height{
+  max-height: 205px;
+  overflow: auto;
+}
+
+.subject-event-height{
+  max-height: 215px;
+  overflow: auto;
+}
+
+
+.contract-reg-status-height{
+  height: 155px;
+  overflow:auto;
+}
+
+.faded-widget{
+  background: #e6e6e6;
+}
+
+.muted-transfer-step-number{
+    padding: 5px 6px 6px 11px;
+    border: 2px solid #333333;
+    text-align: center;
+    border-radius: 20px;
+    margin-right: 5px;
+    color: #333333;
+    font-size: 15px;
+}
+
+.transfer-step-number{
+  padding: 5px 6px 6px 11px;
+  border: 2px solid #000000;
+  text-align: center;
+  border-radius: 20px;
+  margin-right: 5px;
+  color: #000000;
+  font-size: 15px;
+}
+

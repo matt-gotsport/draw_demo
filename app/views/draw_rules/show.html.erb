@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draw definition:</strong>
+  <%= @draw_rule.draw_definition_id %>
+</p>
+
+<p>
+  <strong>Draw rule type:</strong>
+  <%= @draw_rule.draw_rule_variety_id %>
+</p>
+
+<%= link_to 'Edit', edit_draw_rule_path(@draw_rule) %> |
+<%= link_to 'All', draw_rules_path %>

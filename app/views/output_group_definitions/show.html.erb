@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draw definition:</strong>
+  <%= @output_group_definition.draw_definition_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @output_group_definition.name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @output_group_definition.size %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @output_group_definition.sequence %>
+</p>
+
+<%= link_to 'Edit', edit_output_group_definition_path(@output_group_definition) %> |
+<%= link_to 'Back', output_group_definitions_path %>

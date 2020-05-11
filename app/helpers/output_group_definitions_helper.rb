@@ -1,0 +1,2 @@
+module OutputGroupDefinitionsHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @draw_step_variety.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @draw_step_variety.variety %>
+</p>
+
+<%= link_to 'Edit', edit_draw_step_variety_path(@draw_step_variety) %> |
+<%= link_to 'All', draw_step_varieties_path %>

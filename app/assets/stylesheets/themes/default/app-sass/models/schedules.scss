@@ -1,0 +1,105 @@
+.schedule-subnav {
+  @include box-shadow(0 1px 2px #ccc);
+  .nav > li > a {
+    padding: 15px 15px;
+    cursor: pointer;
+    &:hover, &:active, &:focus {
+      color: $link-hover-color;
+      background-color: #eeeeee !important;
+    }
+  }
+  .nav-pills > li > a {
+    border-radius: 0px;
+  }
+}
+
+.unassigned-matches-height{
+  max-height: 500px;
+  overflow: auto;
+}
+
+.being-dragged-clear{
+  background-color: transparent;
+}
+
+.match-chart-draggable{
+  cursor: move;
+}
+
+#unassigned-matches{
+  min-height: 200px;
+}
+
+#match-chart-calendar .fc-day-top{
+  cursor: pointer;
+}
+
+.top-nav {
+  @include box-shadow(0 1px 2px #ccc);
+  .nav > li > a {
+    padding: 15px 15px;
+    cursor: pointer;
+    &:hover, &:active, &:focus {
+      color: $link-hover-color;
+      background-color: #eeeeee !important;
+    }
+  }
+  .nav-pills > li > a {
+    border-radius: 0px;
+  }
+}
+
+.template-subnav {
+  @include box-shadow(0 1px 2px #ccc);
+  .nav > li > a {
+    padding: 15px 15px;
+    cursor: pointer;
+    &:hover, &:active, &:focus {
+      color: $link-hover-color;
+      background-color: #eeeeee !important;
+    }
+  }
+  .nav-pills > li > a {
+    border-radius: 0px;
+  }
+}
+
+.unassigned-teams{
+  position: fixed;
+  z-index: 100;
+  background: #e4e4e4;
+  right: 0;
+  border: 1px solid #000;
+  border-radius: 6px 0px 0px 6px;
+  margin-top: 5px;
+}
+
+.unassigned-teams .widget{
+  background: #e4e4e4;
+  border-radius: 6px 0px 0px 6px;
+}
+
+
+.expand_collapse{
+    background: #e4e4e4;
+    height: 41px;
+    width: 48px;
+    position: absolute;
+    margin-left: -48px;
+    margin-top: 17px;
+    padding-left: 8px;
+    padding-top: 7px;
+    font-size: 16px;
+    border-radius: 6px 0px 0px 6px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.small-icon-size{
+  font-size: 10px;
+}
+
+#match-chart .fc-expander-space{
+  display: none;
+}
+

@@ -1,0 +1,38 @@
+.local-search {
+  .square-sm {
+    &.bg-danger {
+      background-color: $state-danger-bg;
+    }
+  }
+}
+.table-responsive {
+  background-color: $white;
+}
+.table.solution-grid {
+  th.fixed-col {
+    padding: 0px;
+    .team-name {
+      padding: 5px;
+    }
+  }
+  tr.no-border td {
+    border-top: none;
+  }
+  tbody.collapse {
+    display: table-row-group;
+    tr.actions {
+      display: table-row;
+    }
+    tr {
+      display: none;
+    }
+    &.in {
+      tr.actions {
+        display: none;
+      }
+      tr {
+        display: table-row;
+      }
+    }
+  }
+}

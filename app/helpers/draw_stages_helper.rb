@@ -1,0 +1,2 @@
+module DrawStagesHelper
+end

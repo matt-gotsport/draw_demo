@@ -1,0 +1,26 @@
+.dropdown-menu > li span.multilink-li-dropdown-item {
+    padding: 6px 16px;
+    border: none;
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333333;
+    white-space: nowrap;
+    a {
+      padding-left: 3px;
+      padding-right: 3px;
+      font-size: 12px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &:hover {
+      background-color: #f5f7f9;
+    }
+}
+
+.multiselect-container {
+  max-height: 300px;
+  overflow-y: scroll;
+}

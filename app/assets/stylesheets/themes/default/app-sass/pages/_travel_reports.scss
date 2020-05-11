@@ -1,0 +1,24 @@
+//Travel reports
+#team-travel-report {
+  #team-travel-table {
+    height: 500px;
+    overflow-y: auto;
+  }
+  #team-travel-map {
+    height: 500px;
+    border: 1px solid #ccc;
+  }
+}
+.travel-away-trips-legend {
+  .progress {
+    margin-bottom: 0px;
+  }
+  .media-left {
+    width: 10%;
+  }
+}
+ul.trip-markers {
+  li.progress {
+    margin-bottom: 2px;
+  }
+}

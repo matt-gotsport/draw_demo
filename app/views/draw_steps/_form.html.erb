@@ -1,0 +1,27 @@
+<%= form_with(model: draw_step, local: true) do |form| %>
+  <% if draw_step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw_step.errors.count, "error") %> prohibited this draw_step from being saved:</h2>
+
+      <ul>
+        <% draw_step.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :draw_stage_definition_id %>
+    <%= form.collection_select(:draw_stage_definition_id, DrawStageDefinition.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draw_step_variety_id %>
+    <%= form.collection_select(:draw_step_variety_id, DrawStepVariety.all, :id, :description) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

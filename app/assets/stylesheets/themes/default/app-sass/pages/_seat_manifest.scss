@@ -1,0 +1,278 @@
+/***
+SeatMap!!!
+***/
+#seatmap{
+  margin-bottom: 40px;
+  #seatmap-svg{
+    position: relative;
+    min-height: 200px;
+    padding:20px;
+  }
+  svg{
+    max-width:100%;
+    background: #ddd;
+    border: 2px solid #222;
+  }
+  .zoom{
+    position: absolute;
+    left: 40px;
+  }
+  .zoom-in{
+    top: 30px;
+  }
+  .zoom-out{
+    top: 58px;
+  }
+  circle{
+    fill: #444;
+  }
+  .drag-off{
+    display:none;
+  }
+  &.drag{
+    circle{
+      fill: #369;
+      cursor: grab;
+    }
+    .drag-off{
+      display: inline-block;
+    }
+    .drag-on,.drag-on-with-snap{
+      display: none;
+    }
+    .edit-buttons{
+      display: none;
+    }
+  }
+  &.drag.grabbing{
+    *{
+      cursor: grabbing;
+    }
+  }
+  .edit-off{
+    display: none;
+  }
+  &.edit-mode{
+    circle{
+      fill:#69B;
+      cursor: pointer;
+      &.selected{
+        fill:orange;
+        stroke: red;
+      }
+    }
+    .drag-buttons{
+      display: none;
+    }
+    .edit-form{
+      display: block;
+    }
+    .edit-on{
+      display: none;
+    }
+    .edit-off{
+      display: inline-block;
+    }
+  }
+  .edit-form{
+    display: none;
+    p{
+      margin-bottom:1em;
+    }
+  }
+}
+
+#seatcontrol{
+  .io{
+    width: 400px;
+    max-width: 100%;
+    min-height: 4em;
+    margin: 1em 0;
+    display:block;
+  }
+}
+
+/***
+SeatMap Section!!!
+***/
+
+#section-map{
+  margin-bottom: 40px;
+  #map-canvas{
+    position: relative;
+    min-height: 200px;
+    padding: 20px;
+  }
+  .zoom{
+    position: absolute;
+    left: 40px;
+  }
+  .zoom-in{
+    top: 30px;
+  }
+  .zoom-out{
+    top: 58px;
+  }
+  svg{
+    min-width:100px;
+    min-height:100px;
+    max-width:100%;
+    background: #ddd;
+    border: 2px solid #222;
+  }
+  polygon,
+  circle,
+  ellipse,
+  rect{
+    fill: #555;
+  }
+  .drag-off{
+    display:none;
+  }
+  &.drag{
+    polygon,
+    circle,
+    ellipse,
+    rect{
+      fill: #369;
+      cursor: grab;
+    }
+    .drag-off{
+      display: inline-block;
+    }
+    .drag-on,
+    .drag-snap-on,
+    .edit-tools,
+    .shape-tools{
+      display: none;
+    }
+  }
+  &.drag.grabbing{
+    *{
+      cursor: grabbing;
+    }
+  }
+  .edit-off{
+    display: none;
+  }
+  &.edit{
+    .edit-off{
+      display: inline-block;;
+    }
+    .edit-on,
+    .drag-tools,
+    .shape-tools{
+      display: none;
+    }
+  }
+  /* Draw Shape Toolbox */
+  .draw-off{
+    display:none;
+  }
+  &.draw-poly,
+  &.draw-rect,
+  &.draw-circle,
+  &.draw-ellipse{
+    .draw-off{
+      display: inline-block;
+    }
+    .on-polygon,
+    .on-rect,
+    .on-circle,
+    .on-ellipse{
+      display: none;
+    }
+    .manip-tools{
+      display: none;
+    }
+    svg{
+      cursor: crosshair;
+    }
+  }
+  .instruct-poly,
+  .instruct-rect,
+  .instruct-circle,
+  .instruct-ellipse{
+    display: none;
+  }
+  &.draw-poly{
+    .instruct-poly{
+      display: block;
+    }
+  }
+  &.draw-rect{
+    .instruct-rect{
+      display: block;
+    }
+  }
+  &.draw-circle{
+    .instruct-circle{
+      display: block;
+    }
+  }
+  &.draw-ellipse{
+    .instruct-ellipse{
+      display: block;
+    }
+  }
+  .instruct-edit{
+    display: none;
+    input.form-control{
+      margin-bottom: 1em;
+    }
+  }
+  &.edit{
+    .instruct-edit{
+      display: block;
+    }
+    polygon,
+    circle,
+    ellipse,
+    rect{
+      fill:#69B;
+      cursor: pointer;
+      &.selected{
+        fill:orange;
+        stroke: red;
+      }
+    }
+    .selected{
+      polygon,
+      circle,
+      ellipse,
+      rect{
+        fill: orange;
+        stroke: red;
+      }
+    }
+  }
+  image.blueprint{
+    visibility: hidden;
+  }
+  &.blueprint{
+    polygon,
+    circle,
+    ellipse,
+    rect{
+      fill-opacity:0.4;
+      stroke: #222;
+    }
+    image.blueprint{
+      visibility: visible;
+    }
+  }
+  .shape-tools{
+    margin-bottom: 1em;
+  }
+  #io-control{
+    .io{
+      width: 400px;
+      max-width: 100%;
+      min-height: 4em;
+      margin: 1em 0;
+      display:block;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+  }
+}

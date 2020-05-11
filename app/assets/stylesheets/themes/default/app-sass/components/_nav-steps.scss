@@ -1,0 +1,245 @@
+.nav-wizard > li {
+  float: left;
+}
+.nav-wizard > li > a {
+  position: relative;
+  background-color: #ffffff;
+  cursor: default;
+}
+.nav-wizard > li:not(:first-child) > a {
+  padding-left: 34px;
+}
+.nav-wizard > li:not(:first-child) > a:before {
+  width: 0px;
+  height: 0px;
+  border-top: 20px inset transparent;
+  border-bottom: 20px inset transparent;
+  border-left: 20px solid #eeeeee;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+}
+.nav-wizard > li:not(:last-child) > a {
+  margin-right: 10px;
+}
+.nav-wizard > li:not(:last-child) > a:after {
+  width: 0px;
+  height: 0px;
+  border-top: 20px inset transparent;
+  border-bottom: 20px inset transparent;
+  border-left: 20px solid #ffffff;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -20px;
+  z-index: 2;
+}
+.nav-wizard > li:first-child > a {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.nav-wizard > li:last-child > a {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.nav-wizard > li.active > a,
+.nav-wizard > li.active > a:hover,
+.nav-wizard > li.active > a:focus {
+  color: #ffffff;
+  background-color: $dark !important;
+}
+.nav-wizard > li.active > a:after {
+  border-left-color: $dark;
+}
+.nav-wizard > li.disabled > a {
+  color: #777777;
+}
+.nav-wizard > li.disabled > a:hover,
+.nav-wizard > li.disabled > a:focus {
+  color: #777777;
+  text-decoration: none;
+  background-color: #ffffff !important;
+  cursor: default;
+}
+.nav-wizard > li.disabled > a:before {
+  border-right-color: #eeeeee;
+}
+.nav-wizard > li.disabled > a:after {
+  border-left-color: #ffffff;
+}
+.nav-wizard.nav-justified > li {
+  float: none;
+}
+.nav-wizard.nav-justified > li > a {
+  padding: 10px 15px;
+}
+@media (max-width: 768px) {
+  .nav-wizard.nav-justified > li > a {
+    border-radius: 4px;
+    margin-right: 0;
+  }
+  .nav-wizard.nav-justified > li > a:before,
+  .nav-wizard.nav-justified > li > a:after {
+    border: none !important;
+  }
+}
+
+//BREADNAV
+.breadnav li { float: left; }
+
+.breadnav li a {
+  background: brown;                   /* fallback color */
+  background: hsla(34,85%,35%,1);
+  color: white;
+  display: block;
+  float: left;
+  padding: 10px 0 10px 65px;
+  position: relative;
+  text-decoration: none;
+}
+
+.breadnav li a:after {
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid hsla(34,85%,35%,1);
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  content: " ";
+  display: block;
+  height: 0;
+  left: 100%;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 2;
+}
+
+.breadnav li a:before {
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  border-top: 50px solid transparent;
+  content: " ";
+  display: block;
+  height: 0;
+  left: 100%;
+  margin-left: 1px;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 1;
+}
+
+.breadnav {
+  border-radius: 0px;
+  /*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+  counter-reset: flag;
+  /*centering*/
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 20px;
+  margin-left: 1%;
+  margin-top: 25px;
+  overflow: hidden;
+  width: 98%;
+
+    -webkit-box-shadow: -1px 2px 17px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 17px -4px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 17px -4px rgba(0,0,0,0.75);
+}
+
+.breadnav a {
+  background: white;
+  color: black;
+  display: block;
+  float: left;
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+  padding: 0 10px 0 80px;
+  position: relative;
+  text-decoration: none;
+  width: 33.33%;
+}
+
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.breadnav a:first-child {
+  border-radius: 0px; /*to match with the parent's radius*/
+  padding-left: 66px;
+}
+
+.breadnav a:first-child:before { left: 20px; }
+
+.breadnav a:last-child {
+  border-radius: 0px; /*this was to prevent glitches on hover*/
+  padding-right: 20px;
+}
+
+/*hover/active styles*/
+.breadnav a.active{
+  background: black;
+  color: white;
+}
+
+.breadnav a:hover{
+  color: black;
+}
+
+.breadnav a.active:after{ background: black; }
+
+/*adding the arrows for the breadnavs using rotated pseudo elements*/
+.breadnav a:after {
+  /*background same as links but the gradient will be rotated to compensate with the transform applied*/
+  background: white;
+  border-radius: 0 5px 0 50px;
+  /*stylish arrow design using box shadow*/
+  box-shadow:
+  2px -2px 0 2px white,
+  3px -3px 0 2px white;
+  /*
+  5px - for rounded arrows and
+  50px - to prevent hover glitches on the border created using shadows*/
+  content: '';
+  height: 49px;
+  position: absolute;
+  right:  -22px;
+  top: 0;
+  transform: scale(0.707) rotate(45deg);
+  -webkit-transform: scale(0.707) rotate(45deg);
+  width: 53px;
+  /*we need to prevent the arrows from getting buried under the next link*/
+  z-index: 1;
+}
+
+/*we dont need an arrow after the last link*/
+.breadnav a:last-child:after { content: none; }
+
+/*we will use the :before element to show numbers*/
+.breadnav a:before {
+  background: white;
+  border-radius: 15%;
+  color: black;
+  content: counter(flag);
+  counter-increment: flag;
+  font-size: 16px;
+  font-weight: bold;
+  height: 34px;
+  left: 34px;
+  line-height: 29px;
+  margin: 6px 0;
+  padding-left: 11px;
+  position: absolute;
+  top: 1px;
+  width: 35px;
+  border: 2px solid black;
+}
+
+.breadnav a.active:before { color: black; }
+
+.breadnav a.active { color: white; }
+
+.border-right{
+  border-right: 1px solid #e6e6e6;
+}
+

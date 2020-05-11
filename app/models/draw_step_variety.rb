@@ -1,0 +1,2 @@
+class DrawStepVariety < ApplicationRecord
+end

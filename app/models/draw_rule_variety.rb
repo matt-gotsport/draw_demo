@@ -1,0 +1,2 @@
+class DrawRuleVariety < ApplicationRecord
+end

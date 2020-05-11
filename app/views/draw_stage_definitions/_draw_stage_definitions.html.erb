@@ -1,0 +1,34 @@
+<div class="widget">
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draw Stage Definitions</span>
+    <span class="button-right"><%= link_to 'New Draw Stage Definition', new_draw_stage_definition_path, "class" => "btn btn-primary rounded" %></span>
+  </h4>
+</div>
+
+<table class="wide">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Input Group</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% draw_stage_definitions.each do |draw_stage_definition| %>
+      <tr>
+        <td><%= link_to draw_stage_definition.name, draw_stage_definition %></td>
+        <td><%= draw_stage_definition.group.name %></td>
+        <td><%= link_to 'Edit', edit_draw_stage_definition_path(draw_stage_definition) %></td>
+        <td><%= link_to 'Destroy', draw_stage_definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to_if @draw_definition!=nil, "Move Up", 
+              update_sequence_draw_definition_path(:id => draw_stage_definition.draw_definition.id, :draw_stage_definition_id => draw_stage_definition.id),
+              method: :patch %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

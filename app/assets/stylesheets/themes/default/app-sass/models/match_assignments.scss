@@ -1,0 +1,22 @@
+table.match-refs-table {
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  tr.danger td {
+    background-color: #ffdddd;
+  }
+  tr.warning td {
+    background-color: #fff5c0;
+  }
+}
+
+.calendar-dates-row{
+  padding: 3px;
+  border-radius: 4px;
+}
+
+
+.no-label-margin{
+  margin-top: 24px;
+}

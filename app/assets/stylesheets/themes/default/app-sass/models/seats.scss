@@ -1,0 +1,74 @@
+#seats-list{
+  .custom.checkbox{
+    display: none;
+  }
+  .multi-edit{
+    text-align: center;
+  }
+  .row-heading{
+    thead{
+      background: #eee;
+    }
+    .show-hide{
+      span{
+        display: inline-block;
+        min-width: 2em;
+        text-align: right;
+      }
+    }
+    .row-name{
+      span{
+        display: inline-block;
+        min-width: 1.2em;
+        text-align: right;
+      }
+    }
+  }
+  .row-seats{
+    thead{
+      background: #f7f7f7;
+    }
+  }
+}
+
+#seats-grid{
+  .custom.checkbox{
+    display: none;
+  }
+  .seat-tile{
+    background: #fff;
+    padding: 2px 4px;
+    position: relative;
+    span{
+      display: inline-block;
+      min-height: 1em;
+      white-space: nowrap;
+    }
+    .select-seat{
+      position: absolute;
+      top: -11px;
+      left: -7px;
+      transform: scale(1);
+    }
+  }
+  td{
+    &.seat{
+      border: 1px solid #000;
+      background: #77ddbb;
+    }
+    &.spacer{
+      background: #eee;
+    }
+    .tooltipped{
+      margin:-6px;
+      padding:6px;
+      min-width: 100%;
+    }
+  }
+}
+
+#seats-canvas{
+  #seatmap{
+    position: relative;
+  }
+}

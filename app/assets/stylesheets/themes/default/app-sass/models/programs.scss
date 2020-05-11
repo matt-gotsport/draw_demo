@@ -1,0 +1,40 @@
+.word-break{
+  word-wrap: break-word;
+}
+
+
+ #pick-color-image{
+  cursor: crosshair;
+ }
+
+ .preview-container{
+  background-color: #edeef2;
+  padding: 8px;
+  border-radius: 6px;
+ }
+
+  .header-container{
+    background-color: #fff;
+    overflow: auto;
+    padding: 13px;
+    margin: 6px 11px 22px 12px;
+    border-radius: 6px;
+
+  }
+
+
+.small-margin-left{
+  margin-left: 55px;
+}
+
+.hidden-table-border{
+  border-top-style: hidden;
+}
+
+.disabled-btn{
+  pointer-events: none;
+}
+
+#program-welcome-info{
+  cursor: pointer;
+}

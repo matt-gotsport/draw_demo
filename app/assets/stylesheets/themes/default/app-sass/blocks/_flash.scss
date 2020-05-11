@@ -1,0 +1,17 @@
+// Flash
+.flash {
+  text-align: center;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  .alert {
+    border-radius: 0px;
+  }
+}
+body.sb-left {
+  .flash {
+    width: calc(100% - 220px);
+  }
+}
+

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  draw_stage_definition: one
+  draw_step: one
+  group: one
+
+two:
+  draw_stage_definition: two
+  draw_step: two
+  group: two

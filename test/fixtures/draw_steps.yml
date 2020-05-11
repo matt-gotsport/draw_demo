@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  draw_definition: one
+  draw_step_variety: one
+
+two:
+  draw_definition: two
+  draw_step_variety: two

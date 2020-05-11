@@ -1,0 +1,14 @@
+<div class="widget">
+  <div class="widget-header"><h4 class="widget-title"><span>Team Drum</span></h4></div>
+
+  <%for e in available do%>
+    <div class="draw-element">
+      <%if e.id == selected_id %>
+        <%= button_to(e.name, next_step_draw_path(:team_id => e.id), :method => "post", :disabled => true, :class => "selected-team btn btn-success btn-sm") %>
+      <%else%>
+        <%= button_to(e.name, next_step_draw_path(:team_id => e.id), :method => "post", :disabled => !selection_control.allow_team_selection, :class => "btn btn-secondary btn-sm") %>
+      <%end%>
+    </div>
+  <%end%>
+</div>
+

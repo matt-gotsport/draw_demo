@@ -1,0 +1,24 @@
+.form-inline.org-reg-event-teams {
+  margin-bottom: 10px;
+  .btn.btn-xs {
+    height: 30px !important; 
+  }
+  select {
+    min-width: 0px !important;
+    max-width: 150px !important;
+    margin-bottom: 5px;
+  }
+  .dropdown-menu-right {
+    left: 0;
+    right: auto;
+  }
+  @media (min-width: $screen-sm) { 
+    margin-bottom: 0px;
+    text-align: right !important;
+    select { margin-bottom: 0px; }
+    .dropdown-menu-right {
+      left: auto;
+      right: 0;
+    }
+  }
+}

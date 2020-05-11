@@ -1,0 +1,19 @@
+<div class="widget">
+<%= content_for :page_title, draw_definition.name+"- Draw Definition" %>
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draw Definition</span>
+  </h4>
+</div>  
+<p id="notice"><%= notice %></p>
+<div class="widget-body">
+<div>
+  <h5>
+    <span>Draw process for <%= draw_definition.output_group_count %> <%= draw_definition.output_group_name.pluralize %></span>
+    <span> of <%= draw_definition.output_group_size %> teams each. </span>
+  </h5>  
+</div>
+<%= link_to 'Edit', edit_draw_definition_path(draw_definition) %> |
+<%= link_to 'All', draw_definitions_path %>
+</div>
+</div>

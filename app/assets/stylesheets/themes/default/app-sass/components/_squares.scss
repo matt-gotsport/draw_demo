@@ -1,0 +1,22 @@
+.square-sm {
+  height: 25px;
+  width: 25px;
+  border: 1px solid #ddd;  
+  &.bg-warning {
+    background-color: $warning-dark
+  }
+}
+.key-sm {
+  margin-bottom: 10px;
+  .square-sm {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  p {
+    line-height: 25px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: top;
+  }
+}

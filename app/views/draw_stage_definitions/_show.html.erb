@@ -1,0 +1,23 @@
+<div class="widget">
+<%= content_for :page_title, draw_stage_definition.name+"- Draw Stage Definition" %>
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draw Stage Definition</span>
+  </h4>
+</div> 
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draw definition:</strong>
+  <%= draw_stage_definition.draw_definition.name %>
+</p>
+
+<p>
+  <strong>Input Group:</strong>
+  <%= draw_stage_definition.group.name %>
+</p>
+
+<%= link_to 'Edit', edit_draw_stage_definition_path(@draw_stage_definition) %> |
+<%= link_to 'All', draw_stage_definitions_path %>
+</div>

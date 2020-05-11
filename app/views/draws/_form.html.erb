@@ -1,0 +1,24 @@
+<%= form_with(model: draw, local: true) do |form| %>
+  <% if draw.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw.errors.count, "error") %> prohibited this draw from being saved:</h2>
+
+      <ul>
+        <% draw.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :draw_definition_id %>
+    <%= form.collection_select(:draw_definition_id, @complete_draw_definitions, :id, :name) unless draw.draw_definition %>
+    <%= form.collection_select(:draw_definition_id, @complete_draw_definitions, :id, :name, {:selected => draw.draw_definition.id}, :disabled => true) if draw.draw_definition %>
+    <%= form.hidden_field :draw_definition_id, :value => draw.draw_definition.id if draw.draw_definition %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

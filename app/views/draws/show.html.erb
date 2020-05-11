@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draw definition:</strong>
+  <%= @draw.draw_definition_id %>
+</p>
+
+<p>
+  <strong>Draw stage:</strong>
+  <%= @draw.draw_stage_id %>
+</p>
+
+<%= link_to 'Perform Draw', performance_draw_path(@draw) %> |
+<%= link_to 'Edit', edit_draw_path(@draw) %> |
+<%= link_to 'All', draws_path %>

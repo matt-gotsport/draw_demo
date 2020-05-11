@@ -1,0 +1,24 @@
+
+to finish ECPR Pool Draw:
+    -No pool with 2 Pro 14 Clubs from same conuntry
+    -Qual from Continental Shield (Enisei, R. Calv) cant go in pool with 2 Top 14 clubs
+    -Rugby Calvisano cant go with Zebre
+    -clear out groups
+    -create simpler steps
+
+general improvements
+    -make the images work
+    -do a real(ish) deploy
+    -draw definition nav to new draw stage: set draw def id
+    -change draw def should nav to draw def when done
+    -draw stage nav to new draw step: set draw stage id
+    -can draw steps get orphaned?
+    -update with sequence not working right (???)
+        -stages
+        -steps
+    -delete step with step groups
+    -sequences in step service: hardcoded to use 0, fix that better
+    -draw stage nav to new draw rule: set draw stage id
+    -empty drums before deleting a draw
+    -sequence order on draw rules and steps
+

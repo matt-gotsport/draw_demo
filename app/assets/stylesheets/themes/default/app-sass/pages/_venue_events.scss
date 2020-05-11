@@ -1,0 +1,11 @@
+.venue_summary {
+  .unavailable {
+    background-color: #000;
+  }
+  .tentative {
+    background-color: #FFFF00;
+  }
+  .individual {
+    background-color: $gray-lighter;
+  }
+}

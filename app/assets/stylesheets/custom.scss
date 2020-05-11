@@ -1,0 +1,568 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ */
+ 
+.dash-widget-height{
+  height: 245px;
+  overflow: hidden;
+ }
+
+ .white-text{
+  color: #fff !important;
+  font-size: 18px !important;
+ }
+
+ .nowrap{
+  white-space: nowrap !important;
+ }
+
+.big-dash-widget-height{
+  height: 285px;
+  overflow: auto;
+
+ }
+
+.weather-temperature{
+  font-size: 23px;
+  color: black;
+}
+
+.weather-icon{
+  width: 50px;
+}
+
+.small-td-width{
+  width: 60px;
+}
+
+ .match-img{
+  width: 50px;
+}
+
+.injury-icon-color{
+  color: purple;
+}
+
+.match-img-sm{
+  width: 30px;
+}
+
+.match-header{
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  margin-top: -10px;
+  margin-left: -12px;
+  margin-right: -12px;
+ }
+
+.responsive-match-well {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.thead-dark{
+  background-color: #e6e6e6;
+}
+
+.event-nav-left{
+  float: left;
+}
+
+ .time-select select{
+  width: 28%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 38px;
+  box-shadow: none;
+  border-color: #ddd;
+ }
+
+
+ .birthdate-select select{
+  width: 32%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 38px;
+  box-shadow: none;
+  border-color: #ddd;
+ }
+
+ .birthdate-select select[disabled], .birthdate-select select[readonly], fieldset[disabled] .birthdate-select select {
+    background-color: #eeeeee;
+    opacity: 1;
+}
+
+.ui-datepicker {
+  z-index: 100000000 !important;
+}
+
+.ui-datepicker-month{
+  color: black;
+}
+
+.ui-datepicker-year{
+  color: black;
+}
+
+ .invoice-data .popover {
+  width:700px !important;
+  max-width: none !important;
+}
+
+ .popover{
+  width: 500px !important;
+  max-width: none !important;
+ }
+
+.nineteen-text{
+  font-size: 19px;
+}
+
+.sixteen{
+  font-size: 16px;
+}
+
+.border-left{
+  border-left: 1px solid #e6e6e6;
+}
+
+.invoice-description{
+  font-size: 16px;
+}
+
+.invoice-total{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.team-title{
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.team-label{
+  font-size: 16px;
+}
+
+.ui-front{
+  z-index: 1200
+}
+
+.draggable{
+  cursor: move;
+  z-index: 2;
+}
+
+div .being-dragged{
+  cursor: move;
+}
+
+.link-cursor{
+  cursor: pointer !important;
+}
+
+.panel-gs{
+  border: 1px solid black !important;
+}
+
+.panel-gs .panel-heading{
+  color: #ffffff;
+  background-color: black;
+  border-color: black;
+}
+
+.reduced-panel-padding{
+  padding: 10px !important;
+}
+
+.panel-gs-info{
+  border: 1px solid #A7A9AA !important;
+}
+.panel-gs-info .panel-heading{
+  color: #ffffff;
+  background-color: #A7A9AA;
+  border-color: #A7A9AA;
+}
+
+.panel-gs-info .btn-default{
+  color: black;
+  border: 1px solid black;
+}
+
+.move-cursor{
+  cursor: move;
+}
+
+.no-margin-bottom{
+  margin-bottom: 0px !important;
+}
+
+.recent-activity{
+  height: 368px;
+}
+
+.add-player-height{
+  height: 370px;
+  overflow: auto;
+}
+
+.roster-builder-height{
+  height: 570px;
+  overflow: auto;
+}
+
+.sm-margin-left{
+  margin-left: 5px !important;
+}
+
+.small-margin-bottom{
+  margin-bottom: 5px !important;
+}
+
+.small-margin-top{
+  margin-top: 5px !important;
+}
+
+.small-margin-right{
+  margin-right: 5px;
+}
+
+.form-control-2{width:32%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px; height: 38px;}
+
+.form-control-3{width:48%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px; height: 38px;}
+
+
+.text-orange{
+  color: #ff7b00;
+}
+
+.legend-icon {
+  font-size: 18px !important;
+}
+
+.legend-text { font-size: 18px; }
+
+.pie-chart {
+  height: 273px;
+  width: 100%;
+}
+
+#teams {
+  height: 273px;
+  width: 100%;
+}
+
+#players {
+  height: 273px;
+  width: 100%;
+}
+
+.legend-male{
+  color: #2C2E31;
+}
+
+.legend-female{
+  color: #8DC44D;
+}
+
+.legend-coed{
+  color: #e6e6e6;
+}
+
+.typeahead-padding{
+  padding-left: 7px;
+}
+
+.editable-text{
+  background-color: #fff;
+  border: 1px dashed #ddd;
+  padding: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.padded-cell{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  min-width: 25px;
+}
+.highlighted-cell{
+  background-color: #f8ff00;
+}
+.last-updated-timeslot{
+  background-color: #89cff0;
+}
+#rounds-table{
+  text-align: center;
+}
+
+.top-icon { margin-top: 20px; }
+
+.inline-div{
+  display: inline-block;
+}
+
+.lighten-out{
+  color: gainsboro;
+}
+
+.constraint-modal-width{
+  width: 70%;
+}
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  .profiler-result {
+    display: none !important;
+  }
+}
+
+.wide {
+    width: 100%;
+}
+
+.widget tr {
+    border-bottom: 1px solid silver;
+}
+
+.widget td {
+    padding: 4px;
+}
+
+.widget th {
+    padding: 4px;
+}
+
+.logo{
+    float: right;
+}
+
+.selected-team:disabled {
+    color: black;
+    border: 2px solid black;
+    opacity: 1.0;
+}
+
+.selected-element span {
+    color: black;
+    border: 2px solid black;
+    opacity: 1.0;
+}
+
+.unavailable {
+    color: red;
+    font-size: 10pt;
+    margin-left:1em;
+    margin-bottom:0.25em;
+}
+
+.choice {
+    display: inline-block;
+    padding: 4px;
+}
+
+.perform-content{
+    display: inline-block;
+    width: 100%
+}
+
+.draw-title{
+    margin-top: 0;
+}
+
+.draw-element-container{
+    width: 98%;
+    margin: 0; 
+    padding: 0;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.draw-element-container legend{
+    margin-left:1em;
+}
+
+.draw-element{
+    display: inline-block;
+    margin: 1em;
+}
+
+.draw-table{
+    width: 90%;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+
+.draw-table th{
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+}
+
+.output-group{
+  border-radius: 25px;
+  height: 7.0em;
+  padding-left: 0;
+}
+
+.output-group-cell {
+    height: 100%;
+    width:100%;
+    display: table;
+}
+
+.output-group-cell div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: beige;
+    border-radius: 35px;
+    border: 2px solid black;
+}
+
+.inline-span * {
+    display:inline;
+}
+
+.team-drum {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%
+}
+
+.group-drum {
+    display: inline-block;
+    vertical-align: top;
+    width: 34%;
+}
+
+.modal-content{
+   border: 2px solid silver;
+}
+
+.modal-header button{
+}
+
+.unavailable-choice{
+    color: red;
+    margin: 1em;
+    font-size: 12pt;
+}
+
+.other-choice{
+    color: darkred;
+}
+
+.highlight-choice{
+    color: red;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.widget-header {
+    padding-bottom: 0.5rem;
+}
+
+.widget-body {
+    padding-top: 0;
+}
+
+.execute-undo {
+    padding-top: 0.5rem;
+    min-height: 4rem;
+}
+
+.wrap {
+    padding-top: 0.5rem;
+}
+
+.widget {
+    margin-bottom: 0.5rem;
+}
+
+.app-navbar {
+    height: 2rem;
+}
+
+#navbar-header {
+    height: 34px;
+    line-height: 34px;
+}
+
+.app-main {
+    margin-top:33px;
+}
+
+.schedule-subnav {
+    height: 1.5rem;
+}
+
+.schedule-subnav .nav {
+    height: 1.5rem;
+}
+
+.schedule-subnav .nav > li > a {
+ padding-top: 2px;
+ padding-bottom: 2px;
+}
+
+.team-container div{
+    display: inline-block;
+    width: 45%;
+}
+
+.team-container input{
+    display: inline-block;
+}
+
+.team-container label{
+    display: inline-block;
+}
+
+#notice {
+  color: green; 
+}
+
+.input-group-warning {
+    background-color: pink;
+}
+
+.team-drum {
+    padding: 0;
+    padding-right: 0.75rem;
+}
+
+.group-drum {
+    padding: 0;
+}

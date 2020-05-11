@@ -1,0 +1,115 @@
+#fullcalendar {
+  background-color: white;
+}
+#fullcalendar .fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td {
+  border-color: inherit;
+}
+#fullcalendar .fc-row:first-child table {
+  margin-bottom: 0px;
+}
+#fullcalendar .fc-toolbar {
+  background: white;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-bottom: 0;
+  .fc-left, .fc-right, .fc-center {
+    padding: 15px;
+  }
+  .fc-state-hover {
+    background-position: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    color: #333;
+    background-color: darken(#ccc, 80%);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  }
+  button {
+    &:hover, &:active {
+      color: #333;
+      background-color: darken(#ccc, 80%);
+      border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    }
+  }
+}
+#fullcalendar a.fc-event {
+  &:hover, &:focus {
+    color: white;
+  }
+}
+#fullcalendar a.fc-event {
+  .match {
+    font-size: 12px;
+  }
+  h5.schedule-name {
+    color: white;
+    font-size: 12px;
+    margin: 2px 0 3px;
+    line-height: 1;
+  }
+  p {
+    margin: 3px 0 0;
+    line-height: 1;
+  }
+}
+#calendar-spinner {
+  position: relative;
+  margin-top: 10%;
+}
+#matchModal.reveal-modal > :last-child {
+  margin-bottom: 10px;
+}
+.match-info {
+  h3.label {
+    margin-top: 10px;
+    font-size: inherit;
+  }
+  p {
+    margin-bottom: 5px;
+    line-height: 1.2;
+    font-weight: bold;
+    span {
+      font-weight: normal;
+    }
+  }
+
+}
+.panel.match-message {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #f2f2f2;
+  hr {
+    margin: 10px 0 15px;
+  }
+}
+// Team Swatch
+$swatch-radius: 2px;
+.swatch {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	position: relative;
+	top: 2px;
+	border: 1px solid #ccc;
+	border-radius: $swatch-radius + 1px;
+	.top, .bottom {
+		height: 50%;
+	}
+	.top {
+		border-top-left-radius: $swatch-radius;
+		border-top-right-radius: $swatch-radius;
+	}
+	.bottom {
+		border-bottom-left-radius: $swatch-radius;
+		border-bottom-right-radius: $swatch-radius;
+	}
+}
+#org-calendar-list {
+  h5, label {
+    font-size: 11px !important;
+  }
+}

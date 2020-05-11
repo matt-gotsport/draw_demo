@@ -1,0 +1,198 @@
+.pro-hero {
+  background-image: url('/images/background-v2.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 0px;
+  h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 30px;
+    small {
+      display: block;
+      margin-top: 10px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+  .org-logo {
+    max-width: 250px;
+    margin: 0 auto 10px;
+    line-height: 100px;
+  }
+}
+
+.pro-schedule-show {
+  table.pro-schedule {
+    th.round {
+      background-color: $brand-primary;
+      color: $dark;
+      border-bottom-width: 1px;
+    }
+    td {
+      line-height: 40px;
+    }
+    .time-and-venue {
+      text-align: right;
+      margin-top: 5px;
+      font-size: 10px;
+      color: $gray-light;
+      border-top: 1px solid $gray-lighter;
+      ul.list-unstyled {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        line-height: 1.6;
+      }
+    }
+    .team-name {
+      line-height: 40px;
+      span {
+        img {
+          display: inline-block;
+          height: 30px;
+          max-width: 30px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  table.pro-schedule-2 {
+    th.round {
+      background-color: $brand-primary;
+      color: $dark;
+      border-bottom-width: 1px;
+    }
+    th.round-date {
+      background-color: $gray-light;
+      color: $dark;
+    }
+    th.round-4 {
+      background-color: $brand-primary;
+      color: $dark;
+      border-bottom-width: 1px;
+    }
+    th.round-date-4 {
+      background-color: $gray-light;
+      color: $dark;
+    }
+    th.round-3 {
+      background-color: $brand-primary;
+      color: $dark;
+      border-bottom-width: 1px;
+      font-size: 22px
+    }
+    th.round-date-3 {
+      background-color: $gray-light;
+      color: $dark;
+      font-size: 22px
+    }
+    th.round-2 {
+      background-color: $brand-primary;
+      color: $dark;
+      border-bottom-width: 1px;
+      font-size: 22px
+    }
+    th.round-date-2 {
+      background-color: $gray-light;
+      color: $dark;
+      font-size: 22px
+    }
+    td {
+      line-height: 40px;
+    }
+    .match-time-2 {
+      font-size: 10px;
+      color: $gray-light;
+    }
+    .team-name-2 {
+      line-height: 40px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: $font-size-sm;
+      width: 130px;
+      span {
+        img {
+          display: inline-block;
+          height: 20px;
+          max-width: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .team-name-3-rows {
+      font-weight: bold;
+      span {
+        img {
+          display: inline-block;
+          height: 30px;
+          max-width: 30px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .team-name-2-rows {
+      font-weight: bold;
+      span {
+        img {
+          display: inline-block;
+          height: 30px;
+          max-width: 30px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .team-name-4-rows {
+      line-height: 40px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: $font-size-sm;
+      width: 130px;
+      span {
+        img {
+          display: inline-block;
+          height: 20px;
+          max-width: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .team-name-6-rows {
+      span {
+        img {
+          display: inline-block;
+          height: 10px;
+          max-width: 10px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  table.pro-schedule-standings {
+    tr.brand-primary {
+      th {
+        background-color: $brand-primary;
+        //color: white;
+        border-bottom-width: 1px;
+      }
+    }
+    td {
+      line-height: 20px;
+    }
+    .team-name {
+      font-size: 10px;
+      line-height: 20px;
+      span {
+        img {
+          display: inline-block;
+          height: 20px;
+          max-width: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

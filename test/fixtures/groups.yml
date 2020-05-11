@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  draw_definition: one
+  name: MyString
+  image_file: MyString
+
+two:
+  draw_definition: two
+  name: MyString
+  image_file: MyString

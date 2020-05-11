@@ -1,0 +1,19 @@
+<h4 class="widget-title">Editing Group</h4>
+
+<div class="left-panel">
+<%= render 'form', group: @group %>
+<%= link_to 'Show', @group %> |
+<%= link_to 'All', groups_path %>
+</div>
+
+<div class="right-panel">
+  <%= form_with(url: update_teams_group_path, method: "patch") do |form| %>
+    <fieldset class="team-container">
+      <legend>Teams</legend>
+      <%= collection_check_boxes(:group, :team_ids, Team.all, :id, :name) do |checkbox| %>
+        <div><%=checkbox.check_box%><%=checkbox.label%></div>
+      <%end%>
+      <%= button_to "Update Teams" %>
+    </fieldset>
+  <% end %>
+</div>

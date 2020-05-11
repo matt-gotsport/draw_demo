@@ -1,0 +1,11 @@
+<%= content_for :page_title, "Maintenance" %>
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <%= render partial: "draw_definitions/draw_definitions", object: DrawDefinition.all %>
+  </div>
+  <div class="col-md-6">
+    <%= render partial: "draw_step_varieties/draw_step_varieties", object: DrawStepVariety.all %>
+    <%= render partial: "draw_rule_varieties/draw_rule_varieties", object: DrawRuleVariety.all %>
+  </div>
+<div>

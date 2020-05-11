@@ -1,0 +1,2 @@
+module DrawOutputGroupsHelper
+end

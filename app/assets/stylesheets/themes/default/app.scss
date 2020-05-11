@@ -1,0 +1,312 @@
+//= Core Variables and mixins
+//@import 'app-sass/variables';
+@import 'app-sass/mixins';
+
+//= Bootstrap Framework
+@import "bootstrap";
+
+//@import "font-awesome-sprockets";
+//@import "font-awesome";
+
+// Including bootstrap/media scss because
+// our 3.1 version doesn't have it yet.
+// _media used for avatar thumbnails
+// Can remove this once we upgrade bootstrap
+@import "custom-bootstrap/media";
+@import "custom-bootstrap/responsive-utilities";
+
+//= Hamburgers
+//@import "hamburgers/hamburgers";
+//= hamburger lib specific styles
+//.hamburger{
+//	outline: none;
+//	border: none;
+//}
+
+//= Building Blocks
+@import 'app-sass/blocks/aside.left';
+@import 'app-sass/blocks/aside.top';
+@import 'app-sass/blocks/navbar';
+@import 'app-sass/blocks/main';
+@import 'app-sass/blocks/footer';
+@import 'app-sass/blocks/side-panel';
+@import 'app-sass/blocks/action-panel';
+@import 'app-sass/blocks/flash';
+
+//= Core CSS
+@import 'app-sass/core/scaffolding';
+@import 'app-sass/core/type';
+@import 'app-sass/core/forms';
+@import 'app-sass/core/tables';
+@import 'app-sass/core/theme';
+@import 'app-sass/core/utilities';
+
+//= Components
+@import 'app-sass/components/dropdown-menus';
+@import 'app-sass/components/breadcrumbs';
+@import 'app-sass/components/buttons';
+@import 'app-sass/components/alerts';
+@import 'app-sass/components/progress';
+@import 'app-sass/components/avatars';
+@import 'app-sass/components/cards';
+@import 'app-sass/components/icons';
+@import 'app-sass/components/widgets';
+@import 'app-sass/components/modals';
+@import 'app-sass/components/lists';
+@import 'app-sass/components/panels';
+@import 'app-sass/components/badges';
+@import 'app-sass/components/labels';
+@import 'app-sass/components/tabs_accordions';
+@import 'app-sass/components/typeahead';
+@import 'app-sass/components/spinner';
+@import 'app-sass/components/media-group-lists';
+@import 'app-sass/components/sign-in-forms';
+@import 'app-sass/components/nav-steps';
+@import 'app-sass/components/squares';
+@import 'app-sass/components/tabs';
+@import 'app-sass/components/tsep_checkout';
+@import 'app-sass/components/modal-lists';
+
+//= App specific models/objects
+@import 'app-sass/models/schedules';
+@import 'app-sass/models/match_assignments';
+@import 'app-sass/models/venues';
+@import 'app-sass/models/comments';
+@import 'app-sass/models/users';
+@import 'app-sass/models/shopping_carts';
+@import 'app-sass/models/optimizer_jobs';
+@import 'app-sass/models/notifications';
+@import 'app-sass/models/calendar_dates';
+@import 'app-sass/models/payments';
+@import 'app-sass/models/programs';
+@import 'app-sass/models/events';
+@import 'app-sass/models/id_cards';
+@import 'app-sass/models/flags';
+@import 'app-sass/models/seats';
+@import 'app-sass/models/stores';
+@import 'app-sass/models/tickets';
+@import 'app-sass/models/contracts';
+@import 'app-sass/models/appearance_templates';
+
+//= App specific pages
+@import 'app-sass/pages/club_management';
+@import 'app-sass/pages/org_calendar';
+@import 'app-sass/pages/schedule_calendar';
+@import 'app-sass/pages/schedule_groups';
+@import 'app-sass/pages/match_grid';
+@import 'app-sass/pages/match_groups';
+@import 'app-sass/pages/public_schedule';
+@import 'app-sass/pages/playoff_formats';
+@import 'app-sass/pages/time_slots';
+@import 'app-sass/pages/travel_reports';
+@import 'app-sass/pages/local_search_jobs';
+@import 'app-sass/pages/venue_events';
+@import 'app-sass/pages/fixtures_templates';
+@import 'app-sass/pages/billing_payments_calendar';
+@import 'app-sass/pages/seat_manifest';
+@import 'app-sass/pages/seatmap_canvas';
+@import 'app-sass/pages/match_scheduler';
+@import 'app-sass/pages/org_event_reg_teams';
+@import 'app-sass/pages/generate_rosters';
+
+//= Fixing issues caused by rails form helpers
+label {
+  span.custom.checkbox {
+    display: inline;
+    min-height: 0;
+    padding: 0;
+  }
+}
+
+div.tooltip-inner {
+  max-width: 350px;
+  width: 350px;
+}
+
+iframe {
+  border: 0px;
+}
+
+.aside-scroll{
+  position: relative;
+  height: 62%;
+}
+
+//.dash-user-email{
+//  color: #55A33D;
+//}
+
+.dash-icon{
+  font-size: 35px;
+}
+
+.input-group-addon{
+  background: #55A33D;
+  color: #fff;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px 15px 0px 15px;
+  min-width: 70px;
+}
+
+.input-group .media-body .widget:hover{
+  filter: brightness(90%);
+}
+
+.dashboard-media.media-body{
+  padding-left: 10px;
+}
+
+.dashboard-header {
+  background: #fff;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 25px 10px;
+  margin-bottom: 20px;
+  height: 161px;
+}
+
+
+.dashboard-header-cricket {
+  background: #fff;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 25px 10px;
+  margin-bottom: 20px;
+  height: 161px;
+}
+
+.dash-widget{
+  color: #2c2e31;
+}
+
+.dash-widget:hover{
+  filter: brightness(90%);
+}
+
+.login{
+  background: image-url('login-bg-green.jpg') no-repeat bottom center;
+    background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
+  -o-background-size:cover;
+  margin: -25px -25px -25px -25px;
+  height: 600px;
+}
+
+.login a{
+  color: #55A33D;
+}
+
+.login .btn-primary{
+  background-color: #55A33D;
+  border: 1px solid #55A33D;
+}
+
+.login .btn-primary:hover{
+  background-color: #55A33D;
+  border: 1px solid #55A33D;
+}
+
+.login .btn-primary:focus{
+  background-color: #55A33D;
+  border: 1px solid #55A33D;
+}
+
+.login .panel{
+  border-radius: 0px;
+}
+
+.login .panel-heading{
+  border-radius: 0px;
+  margin-top: 25px;
+}
+
+.login .panel-title{
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+}
+.rounds-grid-body {
+  thead {
+    background-color: white;
+    text-align: center;
+	}
+}
+
+.wrap-login {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1);
+}
+.login-promo {
+  background-image: url(asset-path('login.jpg'));
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+.simple-login {
+  padding: 3rem;
+  .form-group{
+          margin-bottom: 32px;
+  }
+  a {
+    color: $gotsport-green;
+  }
+  input,
+  input:focus,
+  input:active{
+          outline: none;
+          box-shadow: none;
+          border-bottom: 2px solid $gotsport-green;
+  }
+
+  input{
+          border: none;
+          border-bottom: 2px solid #eee;
+          height: 40px;
+  }
+  .btn{
+          width: 100%;
+          background-color: $gotsport-green;
+          border-color: $gotsport-green;
+  }
+
+  .btn:focus{
+          background-color: $gotsport-green;
+          border-color: $gotsport-green;
+  }
+  .btn:hover{
+          background-color: $gotsport-green;
+          border-color: $gotsport-green;
+  }
+}
+.login-promo {
+  h5 {
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: .9em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #70af5f;
+  }
+  h3 {
+    font-weight: 700 !important;
+    color: white;
+  }
+}
+
+
+ #application-navbar{
+  background: #fff;
+ }
+
+ .app-navbar .icon-bar{
+  background: #8ec549;
+ }

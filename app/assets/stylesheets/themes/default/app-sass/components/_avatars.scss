@@ -1,0 +1,145 @@
+.avatar{
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin-right: 16px;
+	transition: all .5s ease;
+        &.avatar-border-danger {
+          border: 2px solid $danger;
+          line-height: 26px;
+        }
+}
+
+.avatar img,
+.avatar a>img{
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+.avatar-circle {
+        border-radius: 100% !important;
+}
+.avatar-circle img{
+	border-radius: 100% !important;
+}
+.avatar-text {
+      background-color: $purple;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      font-size: 12px;
+      &.avatar-xxs {
+        font-size: 8px;
+      }
+}
+.avatar-sq img{
+	border-radius: 0 !important;
+}
+
+.avatar-xxs{
+	width: 20px;
+	height: 20px;
+        line-height: 20px;
+}
+.avatar-xs{
+	width: 30px;
+	height: 30px;
+        line-height: 30px;
+}
+.avatar-sm{
+	width: 40px;
+	height: 40px;
+        line-height: 40px;
+}
+.avatar-md{
+	width: 50px;
+	height: 50px;
+        line-height: 50px;
+}
+.avatar-lg{
+	width: 60px;
+	height: 60px;
+        line-height: 60px;
+}
+.avatar-xl{
+	width: 70px;
+	height: 70px;
+        line-height: 70px;
+}
+.avatar-xxl{
+  width: 100px;
+  height: 100px;
+        line-height: 100px;
+}
+
+.avatar-xs-autoheight{
+	width: 30px;
+        height: auto;
+}
+.avatar-sm-autoheight{
+	width: 40px;
+        height: auto;
+}
+.avatar-md-autoheight{
+	width: 50px;
+        height: auto;
+}
+.avatar-lg-autoheight{
+	width: 60px;
+        height: auto;
+}
+.avatar-xl-autoheight{
+	width: 70px;
+        height: auto;
+}
+.avatar-xxl-autoheight{
+  width: 100px;
+        height: auto;
+}
+.avatar-thumb-autoheight{
+  width: 165px;
+  height: auto;
+}
+
+.status{
+	display: inline-block;
+	right: 2px;
+	bottom: 2px;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+}
+
+.avatar .status{
+	position: absolute;
+}
+
+.avatar-xs>.status{
+	width: 8px;
+	height: 8px;
+}
+.avatar-sm>.status{
+	width: 10px;
+	height: 10px;
+}
+.avatar-md>.status{
+	width: 12px;
+	height: 12px;
+}
+.avatar-lg>.status,
+.avatar-xl>.status{
+	width: 14px;
+	height: 14px;
+}
+
+.status-online{
+	background-color: $brand-success;
+}
+.status-away{
+	background-color: $brand-warning;
+}
+.status-offline{
+	background-color: $brand-danger;
+}

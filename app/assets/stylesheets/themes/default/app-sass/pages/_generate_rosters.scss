@@ -1,0 +1,10 @@
+ul.generate-rosters-list {
+  background: white;
+  max-height: 100px;
+  overflow-y: scroll;
+  border: 1px solid $gray-lighter;
+  padding: 5px 10px;
+  li {
+    margin-bottom: 10px;
+  }
+}

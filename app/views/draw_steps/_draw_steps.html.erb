@@ -1,0 +1,39 @@
+<div class="widget">
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draw Steps</span>
+    <span class="button-right"><%= link_to 'New Draw Step', new_draw_step_path, "class" => "btn btn-primary rounded" %></span>
+  </h4>
+</div>
+
+<table class="wide">
+  <thead>
+    <tr>
+      <th>Sequence</th>
+      <th>Draw step type</th>
+      <th>Draw Stage definition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% draw_steps.each do |draw_step| %>
+      <tr>
+        <td><%= draw_step.draw_step_sequence.nil? ? "None" : draw_step.draw_step_sequence.sequence %></td>
+        <td><%= draw_step.draw_step_variety.description %></td>
+        <td><%= draw_step.draw_stage_definition.nil? ? "None" : draw_step.draw_stage_definition.name %></td>
+        <td><%= link_to 'Edit', edit_draw_step_path(draw_step) %></td>
+        <td><%= link_to 'Destroy', draw_step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%unless @draw_stage_definition.nil? %>
+            <%= link_to "Move Up", 
+                update_sequence_draw_stage_definition_path(:id => @draw_stage_definition.id, :draw_step_id => draw_step.id),
+                method: :patch %>
+          <%end%>    
+        </td>        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+

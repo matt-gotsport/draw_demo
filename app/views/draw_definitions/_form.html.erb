@@ -1,0 +1,37 @@
+<%= form_with(model: draw_definition, local: true) do |form| %>
+  <% if draw_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw_definition.errors.count, "error") %> prohibited this draw_definition from being saved:</h2>
+
+      <ul>
+        <% draw_definition.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :output_group_name %>
+    <%= form.text_field :output_group_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :output_group_count %>
+    <%= form.text_field :output_group_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :output_group_size %>
+    <%= form.text_field :output_group_size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

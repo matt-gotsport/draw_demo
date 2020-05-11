@@ -1,0 +1,353 @@
+$primary: #5CB246;
+$text: $text-color;
+
+.id-card-thai {
+  $primary: #ad9054;
+  $text: #355671;
+
+  .mobile-id-card {
+    background-image: image-url('id-thai-bg4.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: top;
+
+    .user-img img { background-color: $primary; }
+    .valid-for { color: $text; }
+    ul.member-details { color: $text; font-weight: 700; }
+    ul.member-details strong { color: $primary; }
+    ul.member-details li { border-bottom-color: $text; }
+  }
+
+  .event-banner { background: $text; }
+}
+
+.id-card-usys {
+  $primary: #14009F;
+  $text: $text-color;
+
+  .mobile-id-card {
+    background-image: image-url('id-usys-bg1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .user-img img { background-color: $primary; }
+    .valid-for { color: $text; }
+    ul.member-details { color: $text; }
+    ul.member-details strong { color: $primary; }
+    ul.member-details li { border-bottom-color: $text; }
+  }
+
+  .event-banner { background: $text; }
+}
+
+.id-card-fedefut {
+  $primary: #122e9e;
+  $text: $text-color;
+
+  .mobile-id-card {
+    background-image: image-url('id-costarica-bg1.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: top;
+
+    .user-img img { background-color: $primary; }
+    .valid-for { color: $text; }
+    ul.member-details { color: $text; }
+    ul.member-details strong { color: $primary; }
+    ul.member-details li { border-bottom-color: $text; }
+  }
+
+  .event-banner { background: $text; }
+}
+
+.id-card-cfa {
+  $primary: #D72B22;
+  $text: $text-color;
+
+  .mobile-id-card {
+    background-image: image-url('id-cfa-bg.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: top;
+
+    .user-img img { background-color: $primary; }
+    .member-pass { color: $primary; }
+    .valid-for { color: $text; }
+    ul.member-details { color: $text; font-weight: 700; }
+    ul.member-details strong { color: $primary; }
+    ul.member-details li { border-bottom-color: $text; }
+  }
+
+  .event-banner { background: $text; }
+}
+
+.mobile-nav-banner {
+  position: relative;
+  background: $success;
+  color: white;
+  padding: 0 10px;
+  height: 36px;
+  .nav-back-link {
+    position: absolute;
+    line-height: 36px;
+    a {
+      color: white;
+      size: 18px;
+    }
+  }
+  .nav-title {
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+.event-banner {
+  text-align: center;
+  size: 18px;
+  color: white;
+  background: $text;
+  padding: 3px 0;
+  position: relative;
+}
+.mobile-id-card {
+  background-image: image-url('id-gotpro-bg1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+
+  .id-card-left {
+    position: relative;
+    flex: 1 30%; 
+  }
+  .id-card-inner {
+    position: relative;
+    flex: 1 60%;
+    padding: 0 5px;
+  }
+  .id-card-right {
+    position: relative;
+    width: 150px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* iphone 6/7/8 landscape and up */
+  @media (min-width: 640px) { 
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    background-size: auto !important;
+    .id-card-left {
+      flex: 0 200px;
+    }
+  }
+
+  .user-img {
+    img {
+      background-color: $primary;
+      padding: 4px;
+    }
+  }
+  .member-pass {
+    font-size: 16px;
+    color: red;
+    text-transform: uppercase;
+  }
+  .valid-for {
+    font-size: 12px;
+    color: $text;
+  }
+  .org-signature {
+    img.idcard-signature {
+      margin-top: 15px;
+      max-width: 100px;
+    }
+  }
+  ul.member-details {
+    margin-top: 5px;
+    font-size: 12px;
+    color: $text;
+    strong {
+      color: $primary;
+    }
+    li { 
+      border-bottom: 1px solid $text; 
+      padding: 5px 0;
+      width: 75%;
+    }
+    li:last-child { border-bottom: none; }
+  }
+  .org-logo {
+    text-align: right;
+    img {
+      max-height: 100px;
+      max-width: 150px;
+    }
+  } 
+}
+
+#id-cards-carousel {
+  padding-bottom: 38px; //pad bottom the same height as carousel controls
+}
+#id-cards-carousel-controls {
+  position: fixed;
+  bottom: 0;
+  &.btn-group > .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+  &.btn-group > .btn:first-child:not(:last-child) {
+    border-radius: 0;
+    border-left: 0;
+  }
+  &.btn-group > .btn:last-child:not(:first-child) {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  &.btn-group > .btn-default:hover, &.btn-group > .btn-default:focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+}
+
+.list-group.mobile-list-group {
+  $item-p-h: 6px;
+  $item-p-v: 8px;
+  $item-thumb-size: 56px;
+  margin-bottom: 0px;
+  .list-group-item {
+    padding: $item-p-h $item-p-v;
+    border-radius: 0px;
+    border-left: none;
+    border-right: none;
+    .item-thumbnail {
+      width: $item-thumb-size;
+      height: $item-thumb-size;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      position: absolute;
+    }
+    .item-inner {
+      height: $item-thumb-size;
+      margin-left: $item-thumb-size + $item-p-v;
+      padding-right: 16px;
+      h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 5px;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      p {
+        margin-bottom: 2px;
+        font-size: 12px;
+      }
+    }
+    .chevron-right {
+      position: absolute;
+      line-height: $item-thumb-size + ($item-p-h*2);
+      right: $item-p-v;
+      top: 0;
+    }
+  }
+
+}
+
+
+// CALNORTH THEME LAYOUT
+.mobile-id-card-2 {
+  background: white;
+  img.bg-image {
+    width: 49%;
+    vertical-align: top;
+  }
+  .user {
+    margin-top: 5px;
+    display: inline-block;
+    width: 50%;
+  }
+  .user-img {
+    display: inline-block;
+    width: 35%;
+    img {
+      background-color: $primary;
+      padding: 4px;
+      width: 100%;
+    }
+    /* iphone 6/7/8 landscape and up */
+    @media (min-width: 640px) { 
+      width: 75px;
+    }
+  }
+  ul.member-details {
+    margin-top: 5px;
+    font-size: 12px;
+    color: $text;
+    strong {
+      color: $primary;
+    }
+    li { 
+      border-bottom: 1px solid $text; 
+      padding: 5px 0;
+      width: 75%;
+    }
+    li:last-child { border-bottom: none; }
+  }
+  .member-pass {
+    font-size: 12px;
+    color: red;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+    /* iphone 6/7/8 landscape and up */
+    @media (min-width: 640px) { 
+      font-size: 16px;
+    }
+  }
+  .valid-for {
+    font-size: 9px;
+    color: $text;
+    vertical-align: top;
+    /* iphone 6/7/8 landscape and up */
+    @media (min-width: 640px) { 
+      font-size: 12px;
+    }
+  }
+  .calnorth-medical-release {
+    padding: 3px 3px 8px 3px;
+    font-size: 8px;
+    ul.liability-player-info {
+      li {
+        border-bottom: 1px solid $text-color;
+        line-height: 15px;
+        strong {
+          border-bottom: 5px solid white;
+        }
+        span.liability-signature {
+          margin-right: 250px;
+        }
+      } 
+    }
+  }
+}
+

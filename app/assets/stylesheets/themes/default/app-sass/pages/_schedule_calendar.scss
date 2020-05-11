@@ -1,0 +1,57 @@
+.alert-well {
+  @include alert-variant($well-bg, $well-border, $panel-default-text);
+}
+.alert.ui-droppable-hover {
+  @extend .alert-success;
+}
+
+#schedule-calendar {
+  .fc-event {
+    color: #000;
+    a {
+      &:active, &:hover {
+        text-decoration: underline;
+      }
+    }
+    .match {
+      font-size: 12px;
+    }
+    .constraint-content {
+      display: none;
+    }
+    .fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td {
+      border-color: inherit;
+    }
+    .progress {
+      margin-bottom: 0;
+      .progress-bar-striped {
+        @include gradient-striped(rgba(255, 255, 255, 1));
+      }
+    }
+  }
+}
+
+.schedule-calendar-filter {
+  .media-left {
+    width: 10%;
+    padding-top: 7px;
+  }
+  .progress {
+    margin-bottom: 0px;
+    .progress-bar-striped {
+      background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+      background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+      //background-image: linear-gradient(45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.fc-row {
+  .fc-content-skeleton {
+    .violation {
+      padding: 2px;
+    }
+  }
+}

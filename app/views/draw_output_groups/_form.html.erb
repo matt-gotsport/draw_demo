@@ -1,0 +1,22 @@
+<%= form_with(model: draw_output_group, local: true) do |form| %>
+  <% if draw_output_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw_output_group.errors.count, "error") %> prohibited this draw_output_group from being saved:</h2>
+
+      <ul>
+        <% draw_output_group.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.number_field :size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

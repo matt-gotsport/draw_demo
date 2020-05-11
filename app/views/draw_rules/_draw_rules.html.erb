@@ -1,0 +1,27 @@
+<div class="widget">
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draw Rules</span>
+    <span class="button-right"><%= link_to 'New Draw Rule', new_draw_rule_path, "class" => "btn btn-primary rounded" %></span>
+  </h4>
+</div>
+
+<table class="wide">
+  <thead>
+    <tr>
+      <th>Draw Rule Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% draw_rules.each do |draw_rule| %>
+      <tr>
+        <td><%= link_to draw_rule.draw_rule_variety.description, draw_rule %></td>
+        <td><%= link_to 'Edit', edit_draw_rule_path(draw_rule) %></td>
+        <td><%= link_to 'Destroy', draw_rule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

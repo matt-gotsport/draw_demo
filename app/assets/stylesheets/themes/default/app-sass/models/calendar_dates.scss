@@ -1,0 +1,24 @@
+#calendar-events-calendar .fc-week{
+  cursor: pointer;
+}
+
+#calendar-events-calendar .fc-content{
+  cursor: pointer;
+}
+
+.absolute-position{
+  position: absolute;
+}
+
+.round-bg{
+  background: black;
+  color: #fff;
+}
+
+.keep-x{
+  overflow-x: scroll;
+}
+
+ ul.ui-autocomplete {
+  z-index: 3000 !important
+}

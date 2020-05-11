@@ -1,0 +1,14 @@
+<div class="widget">
+  <div class="widget-header"><h4 class="widget-title"><span><%=group_type_name%> Drum</span></h4></div>
+
+  <%for e in available do%>
+    <div class="draw-element">
+      <%= button_to( e.name, 
+                     next_step_draw_path(:group_id => e.id), 
+                     :method => "post", 
+                     :disabled => !selection_control.allow_group_selection,
+                     :class => "btn btn-secondary btn-sm" ) %>
+    </div>
+  <%end%>
+</div>
+

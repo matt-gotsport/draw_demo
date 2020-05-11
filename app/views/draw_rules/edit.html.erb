@@ -1,0 +1,49 @@
+<div class="row">
+  <%= content_for :page_title, "Edit Draw Rule" %>
+
+  <div class="col-md-4">  
+    <div class="widget">
+      <h4 class="widget-title">Draw Rule</h4>
+      <%= render 'form', draw_rule: @draw_rule %>
+      <%= link_to 'Show', @draw_rule %> |
+      <%= link_to 'All', draw_rules_path %>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    
+    <div class="widget">
+      <h4 class="widget-title">Draw Stages and Steps</h4>
+      <%for stage_def in @draw_rule.draw_definition.draw_stage_definitions%>
+        <details>
+          <summary><%=stage_def.name%></summary>
+          <%= form_with(url: update_steps_draw_rule_path, method: "patch") do |form| %>
+            <%= hidden_field(:draw_rule, :draw_stage_definition_id, :value => stage_def.id)%> 
+            <table>
+              <%= collection_check_boxes(:draw_rule, :draw_step_ids, stage_def.draw_steps, :id, :description) do |checkbox| %>
+                <tr>
+                  <td><%=checkbox.check_box%></td>
+                  <td><%=checkbox.label%></td>
+                </tr>
+              <%end%>
+            </table>
+            <%= button_to "Update Steps" %>
+          <% end %>
+        </details>
+      <%end%>
+    </div>
+
+    <div class="widget">
+      <h4 class="widget-title">Available Groups</h4>
+      <%= form_with(url: update_groups_draw_rule_path, method: "patch") do |form| %>
+        <%= collection_check_boxes(:draw_rule, :group_ids, Group.all, :id, :name) do |checkbox| %>
+          <div class="choice"><%=checkbox.check_box%><%=checkbox.label%></div>
+        <%end%>
+        <%= button_to "Update Groups" %>
+      <%end%>
+    </div>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,28 @@
+<div class="widget">
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draw Definitions</span>
+    <span class="button-right"><%= link_to 'New Draw Definition', new_draw_definition_path, "class" => "btn btn-primary rounded" %></span>
+  </h4>
+</div>   
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% draw_definitions.each do |draw_definition| %>
+      <tr>
+        <td class="wide"><%= link_to draw_definition.name, draw_definition %></td>
+        <td><%= link_to 'Edit', edit_draw_definition_path(draw_definition) %></td>
+        <td><%= link_to 'Destroy', draw_definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+

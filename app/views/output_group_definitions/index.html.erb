@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h4 class="widget-title">Output Group Definitions</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Draw definition</th>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Sequence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @output_group_definitions.each do |output_group_definition| %>
+      <tr>
+        <td><%= output_group_definition.draw_definition_id %></td>
+        <td><%= output_group_definition.name %></td>
+        <td><%= output_group_definition.size %></td>
+        <td><%= output_group_definition.sequence %></td>
+        <td><%= link_to 'Show', output_group_definition %></td>
+        <td><%= link_to 'Edit', edit_output_group_definition_path(output_group_definition) %></td>
+        <td><%= link_to 'Destroy', output_group_definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Output Group Definition', new_output_group_definition_path %>

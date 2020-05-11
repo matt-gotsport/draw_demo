@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= render partial: 'draws/draws', locals:{draws: @draw_definition.draws, draw_definition: @draw_definition} %>
+  </div>  
+  <div class="col-md-6">
+    <%= render partial: 'draw_stage_definitions/draw_stage_definitions', object: @draw_stage_definitions %>
+    <%= render partial: 'draw_rules/draw_rules', object: @draw_definition.draw_rules %>
+  </div>
+</div>

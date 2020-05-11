@@ -1,0 +1,42 @@
+<%= form_with(model: draw_step_variety, local: true) do |form| %>
+  <% if draw_step_variety.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw_step_variety.errors.count, "error") %> prohibited this draw_step_variety from being saved:</h2>
+
+      <ul>
+        <% draw_step_variety.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variety %>
+    <%= form.text_field :variety %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allow_free_selection %>
+    <%= form.check_box :allow_free_selection %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allow_team_selection %>
+    <%= form.check_box :allow_team_selection %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allow_group_selection %>
+    <%= form.check_box :allow_group_selection %>
+  </div>  
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+.label-lg{
+  font-size: 15px;
+  display:inline-block;
+}
+
+.bip-list-item{
+  line-height: 36px;
+  font-size: 16px;
+  margin: 6px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+
+.dropdown-no-close{
+  width: 400px;
+}
+
+
+
+li.flag-item.bip-list-item:hover{
+  filter: brightness(90%);
+}
+
+li.flag-item.bip-list-item a:hover{
+  background-color: transparent;
+}
+
+
+li.flag-item.bip-list-item .btn:hover{
+  background-color: #fff !important;
+
+}

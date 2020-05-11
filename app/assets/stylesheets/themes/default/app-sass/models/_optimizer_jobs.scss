@@ -1,0 +1,35 @@
+.job-text-log {
+  background: #fff;
+  color: #000;
+  border: 1px solid #e0e0e0;
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+.job-status {
+  text-transform: uppercase;
+  padding: 3px;
+  text-align: center;
+  font-size: 10px;
+  background-color: $watermark;
+  &.job-status-killed {
+    background-color: $grey;
+    color: #fff;
+  }
+  &.job-status-running {
+    background-color: $info;
+    color: #fff;
+  }
+  &.job-status-finished, &.job-status-feasible, &.job-status-optimal {
+    background-color: $success;
+    color: #fff;
+  }
+  &.job-status-infeasible {
+    background-color: $danger;
+    color: #fff;
+  }
+  &.job-status-waiting {
+    background-color: $warning;
+    color: #fff;
+  }
+}

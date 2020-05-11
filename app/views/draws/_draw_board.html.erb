@@ -1,0 +1,45 @@
+<div class="widget">
+<table class="draw-table">
+  <thead>
+    <tr>
+    <% draw.draw_output_groups.each do |output_group| %>
+      <th><%= output_group.group.name%></th>
+    <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for r in 1..max_rows %>
+      <tr>
+        <% draw.draw_output_groups.each do |output| %>
+          <%team = assigned_teams[output.group.id].key?(r) ? assigned_teams[output.group.id][r] : nil%>
+          <td>
+            <fieldset class="output-group">
+                <div class="output-group-cell">
+                    <%unless team.nil?%>
+                      <%if team.id == (draw.selected_team.nil? ? nil : draw.selected_team.id)%>
+                        <div class="selected-element"><span class="btn btn-success btn-sm"><%=team.name%></span></div>
+                      <%else%>
+                        <div><span class="btn btn-secondary btn-sm"><%=team.name%></span></div>
+                      <%end%>
+                    <%else%>
+                      <div>  
+                        <%show_button = (draw.current_stage.current_step.draw_step_variety.allow_free_selection and team.nil?)%> 
+                        <%= button_to "Assign", 
+                                      next_step_draw_path, 
+                                      :method => "post",
+                                      :class => "btn btn-secondary btn-sm",
+                                      params:{group_id: output.group.id, sequence: r} if show_button %>
+                      </div>
+                    <%end%>
+                </div>
+              </fieldset>
+          </td>
+        <% end %>
+        
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+</div>

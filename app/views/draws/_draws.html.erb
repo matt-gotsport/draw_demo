@@ -1,0 +1,33 @@
+<div class="widget">
+<div class="widget-header">
+  <h4 class="widget-title">
+    <span>Draws</span>
+    <span class="button-right">
+      <%= link_to 'New Draw', new_draw_path, "class" => "btn btn-primary rounded" unless defined?(draw_definition)%>
+      <%= link_to 'New Draw', new_draw_path(:draw_definition_id => @draw_definition.id), "class" => "btn btn-primary rounded" if defined?(@draw_definition) %>
+    </span>
+  </h4>
+</div>
+
+<table class="wide">
+  <thead>
+    <tr>
+      <th>Draw definition</th>
+      <th>Current stage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% draws.each do |draw| %>
+      <tr>
+        <td><%= draw.draw_definition.name %></td>
+        <td><%= draw.draw_stage.draw_stage_definition.name %></td>
+        <td><%= link_to 'Perform Draw', performance_draw_path(draw) %></td>
+        <td><%= link_to 'Edit', edit_draw_path(draw) %></td>
+        <td><%= link_to 'Destroy', draw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,13 @@
+<div class="widget wide">
+  <div class="widget-header"><h4 class="widget-title"><span>Unavailable Choices</span></h4></div>
+  <%for e in unavailable do%>
+    <button type="button" 
+            class="unavailable btn btn-secondary btn-sm" 
+            data-toggle="modal" 
+            data-target="#explanation-modal" 
+            data-choice="<%=e.first.class.name+e.first.id.to_s%>">
+            <%=e.second.short_description%>
+    </button>
+  <%end%> 
+</div>
+

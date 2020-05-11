@@ -1,0 +1,22 @@
+/***
+SeatMap Canvas
+***/
+#map-canvas-wrapper,
+#seat-canvas-wrapper{
+  border: 2px solid #222;
+  margin-bottom: 12px;
+  .canvas-container{
+    max-width:100%;
+    background: #ddd;
+  }
+}
+#section-map{
+  .btn.blueprint-toggle, 
+  .btn.view-seats,
+  #seat-canvas-wrapper {
+  	display: none;
+  }
+  .ticketing-list a{
+  	display: block;
+  }
+}

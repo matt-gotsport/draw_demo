@@ -1,0 +1,65 @@
+#billing-payments-calendar {
+  .fc-event {
+    color: #000;
+    font-size: 0.9em;
+    a {
+      &:active, &:hover {
+        text-decoration: underline;
+      }
+    }
+    border: none;
+    background: none;
+    text-align: right;
+    &.pay-charges{
+      color:green;
+    }
+    &.pay-refunds{
+      color:red;
+    }
+    &.pay-norefunds{
+      color:gray;
+    }
+    &.pay-totals{
+      font-weight: bold;
+    }
+  }
+  .fc-day-number{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding:0 0.2em;
+    a{
+      padding:0.1em 0.2em;
+      margin:-0.1em -0.2em;
+      &:hover,
+      &:active{
+        text-decoration:underline;
+      }
+    }
+  }
+  .fc-day-top .check{
+    margin:3px 8px 0;
+    float: right;
+  }
+  .custom.checkbox{
+    display:none;
+  }
+  .panel-footer{
+    .pay-charges{
+      color:green;
+    }
+    .pay-refunds{
+      color:gray;
+      &.negative{
+        color:red;
+      }
+    }
+    .pay-totals{
+      color: black;
+    }
+    text-align:center;
+  }
+  .odd-month{
+    background: #e0e5e9;
+  }
+
+}

@@ -1,0 +1,40 @@
+<div class="row">
+  <%= content_for :page_title, "New Draw" %>
+  <div class="col-md-10">
+    <div class="widget">
+      <div class="widget-header">
+        <h4 class="widget-title"><span>New Draw</span></h4>
+      </div>
+      <div class="widget-body row">     
+        
+        <div class="col-md-4">
+          <%= render 'form', draw: @draw %>
+          <%= link_to 'All', draws_path %>
+        </div>
+
+        <div class="col-md-8">
+          <%unless @draw.draw_definition.nil?%>
+            <h4>
+              <span>Expecting draw process for <%= @draw.draw_definition.output_group_count %> <%= @draw.draw_definition.output_group_name.pluralize %></span>
+              <span> of <%= @draw.draw_definition.output_group_size %> teams each. </span>
+            </h4>
+            <div class="list-group">
+              <%for draw_stage_def in @draw.draw_definition.draw_stage_definitions%>
+                <div class="list-group-item">
+                  <span><%=draw_stage_def.name%></span>
+
+                  <div class="list-group">
+                      <%group_summary = draw_stage_def.input_group.name+" ("+draw_stage_def.input_group.teams.length.to_s+" teams) = "+draw_stage_def.input_group.team_names.join(",  ")%>
+                      <div class="list-group-item"><%=group_summary%></div>
+                  </div>
+
+                </div>
+              <%end%>
+            </div>
+          <%end%>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

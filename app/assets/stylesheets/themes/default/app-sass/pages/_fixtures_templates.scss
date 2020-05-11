@@ -1,0 +1,371 @@
+
+//@import "theme";
+
+// Colors selected using
+// https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=4&name=My%20Color%20Theme&mode=hsv&rgbvalues=0.33566715365400346,0,0.8500000000000001,0.04450000000000014,0.33261775172523694,0.89,0,0.8,0.7461588427871902,0.040000000000000126,0.8,0.15887138956538377,0.6112296313443949,0.8,0&swatchOrder=0,1,2,3,4
+$seedA: #00CCBE;
+$seedB: #0B55E3;
+$seedC: #5600D9;
+$seedD: #0ACC29;
+$seedE: #9CCC00;
+$oddRowBg: #f4f4f4;
+$utilDarken: 10%;
+$utilColor1: #3C95AF; // aqua
+$lightUtilColor1: lighten($utilColor1, 40%);
+$utilColor1Dark: darken($utilColor1, $utilDarken);
+$utilColor2: #6BC541; // light green
+$lightUtilColor2: lighten($utilColor2, 40%);
+$utilColor2Dark: darken($utilColor2, $utilDarken);
+$utilColor3: #d6c52e; // hot gold
+$lightUtilColor3: lighten($utilColor3, 40%);
+$utilColor3Dark: darken($utilColor3, $utilDarken);
+$utilColor4: #af2daf; // lilac
+$lightUtilColor4: lighten($utilColor4, 40%);
+$utilColor4Dark: darken($utilColor4, $utilDarken);
+
+// Overview
+.template-overview {
+	margin-top: 1em;
+	a.name {
+		display: block;
+	}
+	label {
+		display: inline-block;
+		margin: 0px;
+	}
+	.details {
+		padding: 0.3em 20px;
+	}
+}
+
+
+// Matchups
+#template-matchups-table {
+	width: 100%;
+	border-collapse: collapse;
+	td {
+		border: 1px solid $gray-light;
+		text-align: center;
+		position: relative;
+		padding: 0px;
+	}
+	td:hover {
+		cursor: auto;
+		background: #fff;
+	}
+	th {
+		color: #fff;
+//		@include title-shadow;
+		padding: 4px 2px;
+		.code {
+			font-size: 16px;
+		}
+		.team-name {
+			font-size: 12px;
+			font-weight: 200;
+		}
+	}
+	th.seed-A {
+		background: $seedA;
+	}
+	th.seed-B {
+		background: $seedB;
+	}
+	th.seed-C {
+		background: $seedC;
+	}
+	th.seed-D {
+		background: $seedD;
+	}
+	th.seed-E {
+		background: $seedE;
+	}
+	td.ignore {
+		background: $gray-light;
+	}
+	td.total {
+		padding: 4px 2px;
+		font-weight: bold;
+	}
+	input {
+		border-color: rgba(#fff, 0);
+		background: none;
+		box-shadow: none;
+		margin: 0px;
+		font-size: 14px;
+		display: inline-block;
+		padding: 2px 4px;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		right: -2px;
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+	input:focus, td:hover input {
+		background: #f5f5f5;
+		border-color: $gray-light;
+
+	}
+	input::-webkit-outer-spin-button:focus,
+	input::-webkit-inner-spin-button:focus {
+		-webkit-appearance: normal;
+	}
+	td.low {
+		background: $lightUtilColor3;
+	}
+	td.high {
+		background: $lightUtilColor2;
+	}
+}
+
+
+
+// Seeds
+@mixin seed-pad {
+	padding: 10px 12px;
+}
+.seeds-container {
+	border: 1px solid #ccc;
+	.seeds-labels {
+		width: 48px;
+		float: left;
+		.seed-label {
+			font-weight: bold;
+			padding: 10px 12px 11px 12px;
+			clear: left;
+		}
+	}
+	.seeds {
+		.seed {
+			clear: right;
+			cursor: move;
+			.team-name {
+				@include seed-pad;
+			}
+			.drag-indicator {
+				@include seed-pad;
+				float: right;
+				color: #ccc;
+			}
+		}
+		.seed:nth-child(odd) {
+			background: $oddRowBg;
+		}
+	}
+}
+.seeds-title {
+	font-weight: bold;
+	//@include title-shadow;
+	@include seed-pad;
+	color: #fff;
+}
+.seeds-A {
+	.seeds-title {
+		background: $seedA;
+	}
+}
+.seeds-B {
+	.seeds-title {
+		background: $seedB;
+	}
+}
+.seeds-C {
+	.seeds-title {
+		background: $seedC;
+	}
+}
+.seeds-D {
+	.seeds-title {
+		background: $seedD;
+	}
+}
+.seeds-E {
+	.seeds-title {
+		background: $seedE;
+	}
+}
+
+
+// Templates
+$slotSize: 22px;
+#seed-sources-container {
+	clear: both;
+	z-index: 100;
+	//background: #fff;
+	//position: absolute;
+	//border-bottom: 1px solid $gray-light;
+	//box-shadow: 0px 2px 6px rgba(#000, 0.25);
+	//margin-bottom: 1em;
+	ul.large-block-grid-3 {
+		overflow: visible;
+		li {
+			padding-bottom: 6px;
+		}
+	}
+	.seed-source {
+		cursor: move;
+	}
+}
+#seed-sources-container.stick {
+	position: fixed;
+	top: 157px;
+}
+.seed-source {
+	height: $slotSize;
+	text-align: center;
+	color: #fff;
+	//@include title-shadow;
+	font-weight: bold;
+	z-index: 1000;
+	font-size: 13px;
+	.code {
+		float: left;
+		padding: 2px 3px 0px 3px;
+		margin-right: 2px;
+		background: rgba(#000, 0.1);
+		height: $slotSize;
+	}
+	.team-name {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.count {
+		float: right;
+		padding: 0px 3px;
+		margin-left: 2px;
+		background: rgba(#000, 0.1);
+		height: $slotSize;
+	}
+}
+.seed-source.seed-A {
+	background: $seedA;
+}
+.seed-source.seed-B {
+	background: $seedB;
+}
+.seed-source.seed-C {
+	background: $seedC;
+}
+.seed-source.seed-D {
+	background: $seedD;
+}
+.seed-source.seed-E {
+	background: $seedE;
+}
+
+
+// Slots
+#week-templates {
+	//#margin: 130px 1em 1em 1em; // TODO: replace with computed value
+	.week-template {
+		display: block;
+		h3, h4 {
+			margin-bottom: 0px;
+		}
+	}
+}
+li.game#template {
+	display: none;
+}
+$slotWidth: 120px;
+.week-template {
+	padding-bottom: 8px;
+	.week-title {
+		background-color: $oddRowBg;
+		padding: 4px 8px;
+		h3 {
+			font-size: 16px;
+			color: #000;
+			margin-top: 0px;
+			line-height: 1em;
+		}
+		margin-bottom: 8px;
+	}
+	.games {
+		li {
+			padding-bottom: 6px;
+		}
+		.game {
+			line-height: 1em;
+			border: 1px solid $gray-light;
+			background: white;
+			margin: 0px;
+			padding: 0px;
+			height: 40px;
+			.slot-container {
+				width: 42%;
+				float: left;
+				margin: 0px;
+				text-align: center;
+				.slot {
+					box-sizing: border-box;
+					height: $slotSize;
+					background: $oddRowBg;
+					margin: 7px 4px;
+					border: 1px solid #fff;
+					font-size: 14px;
+					position: relative;
+					box-shadow: inset 0px 0px 8px rgba(#000, 0.2);
+					.hint {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						width: 0px;
+					}
+					.seed-source {
+						//position: absolute;
+						//top: 0px;
+						//left: 0px;
+						margin: 0px;
+						top: -16px;
+						z-index: 0;
+						height: $slotSize;
+						div {
+							height: $slotSize;
+							padding-top: 3px;
+						}
+						.count {
+							display: none;
+						}
+					}
+				}
+				.slot.ui-state-highlight {
+					border: 1px solid #dd0;
+				}
+				.slot::before {
+					position: relative;
+					top: 2px;
+					color: #888;
+				}
+				.slot.home::before {
+					content: "Home";
+				}
+				.slot.away::before {
+					content: "Away";
+				}
+				.columns {
+					text-align: center;
+				}
+			}
+			.count-container {
+				width: 10%;
+				float: left;
+				text-align: center;
+				padding: 10px 4px;
+				.count {
+					color: #666;
+				}
+			}
+      .delete-container {
+        width: 6%;
+        float: left;
+        text-align: center;
+				padding: 10px 4px;
+      }
+		}
+	}
+}

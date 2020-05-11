@@ -1,0 +1,25 @@
+<div class="row">
+  <%= content_for :page_title, "Edit Draw Step" %>
+
+  <div class="col-md-4">
+    <div class="widget">
+      <h4 class="widget-title">Draw Step</h4> 
+        <%= render 'form', draw_step: @draw_step %>
+        <%= link_to 'Show', @draw_step %> |
+        <%= link_to 'All', draw_steps_path %>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="widget">
+      <h4 class="widget-title">Available Groups</h4>  
+        <%= form_with(url: update_groups_draw_step_path, method: "patch") do |form| %>
+          <%= collection_check_boxes(:draw_step, :draw_output_group_definition_ids, @draw_output_groups, :id, :name) do |checkbox| %>
+            <div class="choice"><%=checkbox.check_box%><%=checkbox.label%></div>
+          <%end%>
+          <%= button_to "Update Groups" %>
+        <% end %>
+    </div>
+  </div>
+
+</div>

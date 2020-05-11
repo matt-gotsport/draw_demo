@@ -1,0 +1,32 @@
+<%= form_with(model: draw_stage_definition, local: true) do |form| %>
+  <% if draw_stage_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(draw_stage_definition.errors.count, "error") %> prohibited this draw_stage_definition from being saved:</h2>
+
+      <ul>
+        <% draw_stage_definition.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :draw_definition_id %>
+    <%= form.collection_select(:draw_definition_id, DrawDefinition.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :group_id %>
+    <%= form.collection_select(:group_id, Group.all, :id, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
